@@ -1,7 +1,8 @@
-package com.egorov.fond.myapplication
+package com.egorov.fond.myapplication.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.egorov.fond.myapplication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
