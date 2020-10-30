@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_time">20dp</dimen>
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="homework_size">200dp</dimen>
+    <dimen name="image_size">50dp</dimen>
+    <dimen name="icon_size">15dp</dimen>
+    <dimen name="time_text">38sp</dimen>
+    <dimen name="exam_text_dhm">20sp</dimen>
+    <dimen name="time_width">50dp</dimen>
+    <dimen name="time_height">55dp</dimen>
+    <dimen name="second_text_sixe">15sp</dimen>
+</resources>

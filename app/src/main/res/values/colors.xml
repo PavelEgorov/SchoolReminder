@@ -14,4 +14,7 @@
     <color name="blue">#04BBF6</color>
     <color name="green_grad">#7FEF8B</color>
     <color name="blue_grad">#7FCFEF</color>
+
+    <color name="green_grad_dark">#A9F4B4</color>
+    <color name="blue_grad_dark">#ADE1F4</color>
 </resources>
