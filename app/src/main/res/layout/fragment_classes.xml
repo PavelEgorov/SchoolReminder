@@ -11,6 +11,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        style="@style/background"
         android:scrollbars="vertical"
         app:fastScrollVerticalTrackDrawable="@drawable/ic_launcher_foreground"
         app:layout_constraintBottom_toBottomOf="parent"

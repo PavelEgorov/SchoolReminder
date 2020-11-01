@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_home"
+        android:title="@string/home"
+        android:enabled="true"
+        android:icon="@drawable/sharp_home_24"
+        android:visible="true" />
+    <item
+        android:id="@+id/item_classes"
+        android:enabled="true"
+        android:icon="@drawable/sharp_insert_invitation_24"
+        android:title="@string/classes"
+        android:visible="true" />
+    <item
+        android:id="@+id/item_message"
+        android:enabled="true"
+        android:icon="@drawable/sharp_message_24"
+        android:title="@string/message"
+        android:visible="true" />
+    <item
+        android:id="@+id/item_favorite"
+        android:enabled="true"
+        android:icon="@drawable/sharp_star_border_24"
+        android:title="@string/favorite"
+        android:visible="true" />
+</menu>

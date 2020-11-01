@@ -5,4 +5,8 @@
     <string name="days">Days</string>
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
+    <string name="home">Home</string>
+    <string name="classes">Classes</string>
+    <string name="message">Message</string>
+    <string name="favorite">Favorite</string>
 </resources>

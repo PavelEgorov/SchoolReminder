@@ -5,9 +5,9 @@
     <dimen name="homework_size">200dp</dimen>
     <dimen name="image_size">50dp</dimen>
     <dimen name="icon_size">15dp</dimen>
-    <dimen name="time_text">38sp</dimen>
-    <dimen name="exam_text_dhm">20sp</dimen>
-    <dimen name="time_width">50dp</dimen>
-    <dimen name="time_height">55dp</dimen>
+    <dimen name="time_text">23sp</dimen>
+    <dimen name="exam_text_dhm">16sp</dimen>
+    <dimen name="time_width">30dp</dimen>
+    <dimen name="time_height">35dp</dimen>
     <dimen name="second_text_sixe">15sp</dimen>
 </resources>

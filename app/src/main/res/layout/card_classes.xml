@@ -9,7 +9,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/radius_card"
+        style="@style/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,20 +23,20 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:cardCornerRadius="30dp">
+                app:cardCornerRadius="@dimen/radius_card">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:id="@+id/classes_image"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
                     app:srcCompat="@drawable/sharp_home_24" />
              </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp">
+                android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -46,20 +46,24 @@
 
                     <TextView
                         android:id="@+id/card_time_exam_title"
+                        android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Title"
-                        android:padding="10dp"
                         android:textColor="@color/white"
-                        android:textSize="24sp">
+                        android:textSize="16sp">
 
                     </TextView>
+
                     <TextView
                         android:id="@+id/card_time_exam_information"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="information">
+                        android:layout_weight="1"
+                        android:text="information"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="10sp">
 
                     </TextView>
                 </androidx.appcompat.widget.LinearLayoutCompat>

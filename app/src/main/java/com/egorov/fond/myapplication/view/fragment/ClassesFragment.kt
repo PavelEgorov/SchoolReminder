@@ -9,6 +9,10 @@ import com.egorov.fond.myapplication.R
 
 class ClassesFragment : Fragment() {
 
+    companion object{
+        fun newInstance() = ClassesFragment()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
