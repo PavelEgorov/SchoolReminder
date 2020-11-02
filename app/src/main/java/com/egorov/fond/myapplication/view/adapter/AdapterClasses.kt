@@ -39,6 +39,16 @@ class AdapterClasses(
             if (item.skypeReference.isEmpty()) rv_card_view_skype.visibility = View.GONE
             else rv_card_view_skype.visibility = View.VISIBLE
 
+
+            if (item.attention) {
+                classes_part_1.setBackgroundResource(R.drawable.gradient_attention)
+                classes_part_2.setBackgroundResource(R.drawable.gradient_attention)
+            }
+            else {
+                classes_part_1.setBackgroundResource(R.color.ligth_gray)
+                classes_part_2.setBackgroundResource(R.color.ligth_gray)
+            }
+
             /// Загрузка иконок и изображения пропустим. Реализация через glide
         }
     }

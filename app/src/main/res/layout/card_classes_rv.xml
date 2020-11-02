@@ -28,6 +28,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/classes_part_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/ligth_gray">
@@ -51,6 +52,7 @@
                 android:layout_weight="1">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/classes_part_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/ligth_gray"

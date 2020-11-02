@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical"
-        app:fastScrollVerticalTrackDrawable="@drawable/ic_launcher_foreground"
+        app:fastScrollVerticalThumbDrawable="?android:attr/fastScrollThumbDrawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
