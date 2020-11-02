@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.egorov.fond.myapplication.R
+import com.egorov.fond.myapplication.di.NAME_HOME
 import com.egorov.fond.myapplication.entity.HomeView
 import com.egorov.fond.myapplication.entity.Homework
 import com.egorov.fond.myapplication.view.adapter.AdapterHomework
@@ -16,12 +17,13 @@ import com.egorov.fond.myapplication.view.viewmodel.BaseViewModel
 import com.egorov.fond.myapplication.view.viewmodel.IView
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.android.ext.android.inject
+import org.koin.core.qualifier.named
 
 /// Напрашивается фрагмент, состоящий из нескольких фрагментов, но как реализовать даннй момент я пока не знаю..
 /// Для каждого сфрагмента будет очень здорово реализовываться модель mvi
 class HomeFragment : IView<HomeView>() {
 
-    private val viewModel: BaseViewModel<HomeView> by inject()
+    private val viewModel: BaseViewModel<HomeView> by inject(named(NAME_HOME))
 
     private lateinit var day1: TextView
     private lateinit var day2: TextView

@@ -26,7 +26,8 @@ class TestMVI: IModel() {
                 text = "",
                 startAt = "8:00 - 8:45",
                 teacher = "Mrs Thomas",
-                countClass = 6
+                countClass = 6,
+                skypeReference = "skype"
             ),
             Class(
                 id = "2",

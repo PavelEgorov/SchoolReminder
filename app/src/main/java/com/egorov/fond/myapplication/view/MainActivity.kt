@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResumeFragments() {
         super.onResumeFragments()
         navigatorHolder.setNavigator(navigator)
+        router.navigateTo(Screens.HomeScreen())
     }
 
     override fun onPause() {

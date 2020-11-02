@@ -11,6 +11,7 @@ data class Class (
     val startAt: String = "",
     val image: String = "",
     val teacher: String = "",
+    val skypeReference: String = "",
     val countClass: Int = 0,
     val attention: Boolean = false
 ) : Parcelable
