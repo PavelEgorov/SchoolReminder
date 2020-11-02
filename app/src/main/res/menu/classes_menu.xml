@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Item_find_classes"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_search"
+        android:id="@+id/item_home_find"
+        android:visible="true"
+        app:showAsAction="always"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/item_option_classes"
+        android:enabled="true"
+        android:icon="@drawable/outline_format_list_bulleted_black_18dp"
+        android:title="Item_option_classes"
+        android:visible="true"
+        app:showAsAction="always"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/item_menu_classes"
+        android:enabled="true"
+        android:icon="?attr/actionModeSelectAllDrawable"
+        android:title="Item_menu_classes"
+        android:visible="true"
+        app:showAsAction="always"
+        android:iconTint="@color/white"/>
+</menu>

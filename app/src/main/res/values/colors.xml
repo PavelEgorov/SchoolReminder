@@ -8,10 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="dark_gray">#555151</color>
-    <color name="ligth_gray">#878282</color>
+    <color name="dark_gray">#191818</color>
+    <color name="ligth_gray">#302F2F</color>
     <color name="blue_gray">#738A9A</color>
     <color name="blue">#04BBF6</color>
     <color name="green_grad">#7FEF8B</color>
     <color name="blue_grad">#7FCFEF</color>
+
+    <color name="green_grad_dark">#A9F4B4</color>
+    <color name="blue_grad_dark">#ADE1F4</color>
 </resources>

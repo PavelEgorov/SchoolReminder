@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open_in">Open in</string>
+    <string name="are_you_ready_for_exams">Are you ready for exams?</string>
+    <string name="days">Days</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="home">Home</string>
+    <string name="classes">Classes</string>
+    <string name="message">Message</string>
+    <string name="favorite">Favorite</string>
+</resources>
