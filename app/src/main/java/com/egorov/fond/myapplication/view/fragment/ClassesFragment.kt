@@ -1,9 +1,7 @@
 package com.egorov.fond.myapplication.view.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.egorov.fond.myapplication.R
 import com.egorov.fond.myapplication.di.NAME_CLASSES
@@ -16,6 +14,7 @@ import kotlinx.android.synthetic.main.fragment_classes.*
 import org.koin.android.ext.android.inject
 import org.koin.core.qualifier.named
 
+
 class ClassesFragment : IView<ClassesView>() {
     private val viewModel: BaseViewModel<ClassesView> by inject(named(NAME_CLASSES))
 
@@ -27,11 +26,12 @@ class ClassesFragment : IView<ClassesView>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_classes, container, false)
     }
@@ -39,6 +39,16 @@ class ClassesFragment : IView<ClassesView>() {
     override fun onStart() {
         super.onStart()
         viewModel.update(this)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        menu.clear();
+        inflater.inflate(R.menu.classes_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
     }
 
     override fun render(responce: ClassesView) {

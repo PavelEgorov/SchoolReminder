@@ -46,7 +46,7 @@
 
                     <TextView
                         android:id="@+id/card_time_exam_title"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Title"
@@ -90,7 +90,7 @@
                         android:rotation="90"
                         android:text="@string/open_in"
                         android:textColor="@color/white"
-                        android:textSize="14sp">
+                        android:textSize="12sp">
 
                     </TextView>
 

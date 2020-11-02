@@ -1,9 +1,6 @@
 package com.egorov.fond.myapplication.intent
 
-import com.egorov.fond.myapplication.entity.Class
-import com.egorov.fond.myapplication.entity.ExamTime
-import com.egorov.fond.myapplication.entity.HomeView
-import com.egorov.fond.myapplication.entity.Homework
+import com.egorov.fond.myapplication.entity.*
 import com.egorov.fond.myapplication.view.viewmodel.BaseViewModel
 import com.egorov.fond.myapplication.view.viewmodel.IModel
 import com.egorov.fond.myapplication.view.viewmodel.IView
@@ -17,7 +14,7 @@ class HomeViewModel(
 
     private var currentClass: Class? = null
     private var currentExamTime: ExamTime? = null
-    private val currentHomework = mutableListOf<Homework>()
+    private var currentUser: User? = null
 
     override fun update(view: IView<HomeView>) {
         model.getCurrentClass()
@@ -33,6 +30,11 @@ class HomeViewModel(
             }
             .flatMap {
                 currentExamTime = it
+
+                model.getUser()
+            }
+            .flatMap {
+                currentUser = it
 
                 model.getListHomework()
             }
@@ -55,7 +57,10 @@ class HomeViewModel(
                         timeMinute1 = currentExamTime?.minute1 ?: "0",
                         timeMinute2 = currentExamTime?.minute2 ?: "0",
 
-                        listHomework = it
+                        listHomework = it,
+
+                        userId = currentUser?.id ?: "",
+                        name = currentUser?.name ?: ""
                     )
                 )
             },

@@ -3,104 +3,129 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
+    style="@style/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/background"
     tools:context=".view.fragment.HomeFragment">
 
-        <include
-            android:id="@+id/include_exam"
-            layout="@layout/card_time_exam"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:menu="@menu/home_menu">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include_exam">
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appbar_home_name"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/dark_gray">
+                android:layout_gravity="center|start"
+                android:layout_marginStart="20dp"
+                android:text="Hi!"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|start"
-                    android:layout_marginStart="20dp"
-                    android:text="Classes"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+    <include
+        android:id="@+id/include_exam"
+        layout="@layout/card_time_exam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_home" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/home_classes_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|end"
-                    android:layout_marginEnd="20dp"
-                    android:text="count another classes"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/ligth_gray"
-                    android:textSize="@dimen/second_text_sixe" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_exam">
 
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <include
-            android:id="@+id/include_classes"
-            layout="@layout/card_classes"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+            android:background="@color/dark_gray">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include_classes">
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:id="@+id/home_homework_coordinator"
-                android:layout_width="match_parent"
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/dark_gray">
+                android:layout_gravity="center|start"
+                android:layout_marginStart="20dp"
+                android:text="Classes"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/homework_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|start"
-                    android:layout_marginStart="20dp"
-                    android:text="Homework"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/home_classes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="20dp"
+                android:text="count another classes"
+                android:textAlignment="textEnd"
+                android:textColor="@color/ligth_gray"
+                android:textSize="@dimen/second_text_sixe" />
 
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/include_classes"
+        layout="@layout/card_classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_classes">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/home_homework_coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_gray">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/homework_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="20dp"
+                android:text="Homework"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_rv_homework"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:orientation="horizontal"
         android:scrollbars="horizontal"
-        android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />

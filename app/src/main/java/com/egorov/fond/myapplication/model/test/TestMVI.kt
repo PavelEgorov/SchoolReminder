@@ -3,6 +3,7 @@ package com.egorov.fond.myapplication.model.test
 import com.egorov.fond.myapplication.entity.Class
 import com.egorov.fond.myapplication.entity.ExamTime
 import com.egorov.fond.myapplication.entity.Homework
+import com.egorov.fond.myapplication.entity.User
 import com.egorov.fond.myapplication.view.viewmodel.IModel
 import io.reactivex.rxjava3.core.Single
 
@@ -63,4 +64,6 @@ class TestMVI: IModel() {
         Homework(id = "1", title = "Literature", time = "2 days left", text = "Read scenes 11-12 of the Master and Margarita"),
         Homework(id = "2", title = "Physics", time = "5 days left", text = "Learn Newton's low")
     ))
+
+    override fun getUser(): Single<User> = Single.just(User(id = "1", name = "Mike"))
 }

@@ -1,10 +1,8 @@
 package com.egorov.fond.myapplication.view.fragment
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,6 +42,7 @@ class HomeFragment : IView<HomeView>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -71,6 +70,16 @@ class HomeFragment : IView<HomeView>() {
         viewModel.update(this)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        menu.clear()
+        inflater.inflate(R.menu.home_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun render(responce: HomeView) {
         day1.text = responce.timeDay1
         day2.text = responce.timeDay2
@@ -83,6 +92,8 @@ class HomeFragment : IView<HomeView>() {
         classText.text = responce.classText
 
         countClasses.text = responce.countClasses
+
+        appbar_home_name.text = "Hi, ${responce.name}!"
 
         /// Реализацию Изображения сделаю позже. Предполагаю грузить через глайд
 

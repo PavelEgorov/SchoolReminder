@@ -1,7 +1,8 @@
 package com.egorov.fond.myapplication.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
 import com.egorov.fond.myapplication.R
 import com.egorov.fond.myapplication.di.injectDependencies
 import com.egorovsoft.vkconnector.navigation.Screens
@@ -11,6 +12,7 @@ import org.koin.android.ext.android.inject
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
+
 
 class MainActivity : AppCompatActivity() {
     private val navigatorHolder: NavigatorHolder by inject()

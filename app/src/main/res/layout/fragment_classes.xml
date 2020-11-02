@@ -3,20 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/classes_constrainlayout"
+    style="@style/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/background"
-    tools:context=".view.fragment.ClassesFragment" >
+    tools:context=".view.fragment.ClassesFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/classes_menu">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appbar_classes_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="20dp"
+                android:text="Classes"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_classes"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         style="@style/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical"
         app:fastScrollVerticalTrackDrawable="@drawable/ic_launcher_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/appbar_classes"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
